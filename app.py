@@ -4,7 +4,7 @@ import time
 import logging
 
 import os.path
-from commands import start_message, new_acknowledgement, button_callback
+from commands import about_message, start_message, new_acknowledgement, button_callback
 from telegram.ext import (
     Updater,
     CommandHandler,
@@ -69,6 +69,7 @@ def main():
     updater.dispatcher.add_handler(CommandHandler("start", start_message))
     updater.dispatcher.add_handler(CommandHandler("new", start_message))
     updater.dispatcher.add_handler(CommandHandler("help", start_message))
+    updater.dispatcher.add_handler(CommandHandler("about", about_message))
 
     updater.dispatcher.add_handler(
         MessageHandler(Filters.command, acknowledge_should_be_channel)

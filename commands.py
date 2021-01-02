@@ -9,7 +9,14 @@ from dateutil import relativedelta as rdelta
 def start_message(update, context):
     """Initial start/help message when calling /help or /start"""
     update.message.reply_text(
-        'Hello! I\'m AcknowledgedBot.\n\nTo make announcements, add me to a group(@AcknowledgedBot) and type "/ack [your announcement here]."\n\nIf you find any bugs or suggestions, please message @ackbotsupport.'
+        'Hello! I\'m AcknowledgedBot.\n\nTo make announcements, add me to a group (@AcknowledgedBot) and type "/ack [your announcement here]."\n\nIf you find any bugs or suggestions, please message @ackbotsupport.'
+    )
+
+
+def about_message(update, context):
+    """Initial start/help message when calling /help or /start"""
+    update.message.reply_text(
+        'AcknowledgedBot was built to reduce the clutter in large group chats. It was built in 2017, and is open source https://github.com/lowewenzel/acknowledged-bot.'
     )
 
 
